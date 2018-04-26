@@ -1,0 +1,214 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwIYqWqhPAMif.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwIYqWqZPAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyCMIT5lu.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwN4rWqhPAMif.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwN4rWqZPAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwPIsWqhPAMif.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwPIsWqZPAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwJYtWqhPAMif.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwJYtWqZPAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/** my css **/
+.footer-section-title {
+    float: right;
+    margin-right: 2%;
+}
+
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+    display: none;
+}
+.nbs-flexisel-container {
+    position: relative;
+    max-width: 100%;
+}
+.nbs-flexisel-ul {
+    position: relative;
+    width: 9999px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+#flexiselDemo1 li {
+    border: 1px solid #f9f9f9;
+}
+.nbs-flexisel-inner {
+    overflow: hidden;
+    position: relative;
+}
+.nbs-flexisel-item {
+    float: left;
+    padding: 0px;
+    cursor: pointer;
+    position: relative;
+    min-height: 490px;
+    margin: 0 10px;
+}
+.nbs-flexisel-item > a img {
+    cursor: pointer;
+    position: relative;
+    max-width:300px;
+    max-height:100px;
+}
+ul#flexiselDemo1 h4 a {
+  margin: 25px 0 8px 0;
+  font-size: 0.9em;
+  display: block;
+  color:#999;
+}
+ul#flexiselDemo1 h4 a:hover {
+  color: #026466;
+  text-decoration: none;
+}
+ul#flexiselDemo1 p{
+  font-size: 0.8em;
+  text-align: center;
+  padding: 3px;
+}
+.product_reco-price {
+    text-align: center !important;
+}
+.price-box span {
+    margin-left: 15%;
+}
+/*** Navigation ***/
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    margin-top:30px;
+}
+.nbs-flexisel-nav-left {
+    left: 1%;
+    background: url(../images/right.png) no-repeat 0px 0px;
+    top: 50%!important;
+}
+.nbs-flexisel-nav-right {
+    right: 1%;
+    background: url(../images/left.png) no-repeat 0px 0px;
+    top: 50%!important;
+}
+.slider_cat-product {
+    margin: 0 !important;
+    padding: 3px;
+}
+.page-header {
+    border-bottom: none !important;
+}
+.product-shop ul li {
+    font-size: 18px;
+}
+.price,
+#product-price {
+    margin-left: 0 !important;
+}
+.price-title {
+    font-weight: bolder;
+}
+.price {
+    font-size: 30px !important;
+}
+#product-price {
+    color: #008B9A;
+    font-size: 30px;
+    font-weight: 600;
+}
+.price-info p,
+.price-info span {
+    font-size: 16px;
+    line-height: 30px;
+}
+.product_sell-options {
+    display: table-cell;
+    border-left: 1px solid #f1f1f1;
+    padding-left: 20px;
+}
+.product_sell-options,
+.price-info {
+    display: table-cell;
+}
+.price-info {
+    padding-right: 15px;
+}
+.title-contact {
+    font-size: 24px;
+    font-weight: bold;
+}
+.num {
+    font-size: 24px;
+    font-weight: 600;
+    color: blue;
+}
