@@ -212,3 +212,6 @@ ul#flexiselDemo1 p{
     font-weight: 600;
     color: blue;
 }
+.carousel-inner>.item>img {
+width:100% !important;
+}
