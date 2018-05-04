@@ -2,7 +2,26 @@
 
 @section('title', 'Chi tiết sản phẩm')
 @section('script')
-
+<script type="text/javascript">
+    $(function() {
+        $('.thumb-link').click(function(e) {
+            e.preventDefault();
+            var d_img = $(this).data('image');
+            $('.thumb-link').removeClass('active-img');
+            $(this).addClass('active-img');
+            var gImg = $('.product-image-gallery').find('img');
+            gImg.removeClass('act').removeClass('inact');
+            gImg.each(function() {
+                var dImg = $(this).data('image');
+                if(dImg === d_img) {
+                    $(this).addClass('act');
+                } else {
+                    $(this).addClass('inact');
+                }
+            })
+        })
+    });
+</script>
 @endsection
 
 @section('content')
@@ -20,14 +39,18 @@
                             <div id="bbm-media-box">
                                 <div class="product-image product-image-zoom">
                                     <div class="product-image-gallery">
-                                        <img id="image-main" class="gallery-image visible" src="{{ $pro['imageProducts'][0]->pro_img }}" alt="Babyni" title="Babyni">
+                                        @forelse($pro['imageProducts'] as $key => $img)
+                                            <img id="image-main" class="gallery-image visible {{ !$key ? 'act' : 'inact'}}" src="{{ $img->pro_img }}" alt="Babyni" title="Babyni" data-image="{{$key}}">
+                                        @empty
+                                            <img src="{{ $pro->pro_thumnail }}" class="gallery-image visible" alt="Babyni" title="Babyni">
+                                        @endforelse
                                     </div>
                                 </div>
                                 <div class="more-views">
                                     <ul class="product-image-thumbs">
-                                        @forelse($pro['imageProducts'] as $img)
+                                        @forelse($pro['imageProducts'] as $key => $img)
                                             <li>
-                                                <a class="thumb-link" href="#" title="" data-image-index="0">
+                                                <a class="thumb-link {{ !$key ? 'active-img' : ''}}" href="#" title="" data-image="{{$key}}">
                                                     <img src="{{ $img->pro_img }}" alt="" width="60" height="60">
                                                 </a>
                                             </li>

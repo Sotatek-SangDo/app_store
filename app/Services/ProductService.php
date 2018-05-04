@@ -29,9 +29,29 @@ class ProductService
     public function getALl()
     {
         $products = Product::join('categories', 'categories.id', '=', 'products.cat_id')
-                            ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_desc', 'categories.name')
+                            ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_sub_desc', 'pro_desc', 'categories.name')
+                            ->paginate(Consts::LIMIT_PRO);
+        return $products;
+    }
+
+    public function getNew()
+    {
+        $products = Product::join('categories', 'categories.id', '=', 'products.cat_id')
+                            ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_sub_desc', 'pro_desc', 'categories.name')
                             ->orderByRaw('id DESC')
-                            ->paginate(Consts::LIMIT);
+                            ->paginate(Consts::LIMIT_PRO);
+        return $products;
+    }
+
+    public function search($search)
+    {
+        $products = Product::join('categories', 'categories.id', '=', 'products.cat_id')
+                            ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_sub_desc', 'pro_desc', 'categories.name')
+                            ->where('pro_name', 'LIKE', "%$search%")
+                            ->orWhere('pro_sub_desc', 'LIKE', "%$search%")
+                            ->orWhere('pro_desc', 'LIKE', "%$search%")
+                            ->orderByRaw('id DESC')
+                            ->paginate(Consts::LIMIT_PRO);
         return $products;
     }
 
@@ -89,8 +109,6 @@ class ProductService
     }
     public function addProImages($proId, Request $request)
     {
-        Log::info($request);
-        Log::info('==============================================================================');
         foreach ($request['pro_imgs'] as $img) {
             $proImage = new ImageProduct();
             $proImage->pro_id = $proId;

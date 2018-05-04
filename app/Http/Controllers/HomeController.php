@@ -28,6 +28,25 @@ class HomeController extends Controller
         return view('homeLayouts.index', ["products" => $products]);
     }
 
+    public function getAll()
+    {
+        $products = $this->productServices->getAll();
+        return view('homeLayouts.products', ['products' => $products]);
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request['search'];
+        $products = $this->productServices->search($search);
+        return view('homeLayouts.search', ['products' => $products, 'search' => $search ]);
+    }
+
+    public function getNews()
+    {
+        $products = $this->productServices->getNew();
+        return view('homeLayouts.new_products', ['products' => $products]);
+    }
+
     public function detail(Request $request, $id)
     {
         $pro = $this->productServices->getProById($request['id']);

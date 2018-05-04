@@ -40,15 +40,15 @@
         <div class="main">
             <div class="col-main">
                 <div class="mainTitleContainer">
-                    <h1 class="blocktitle"><p>#simplify parenting</p></h1>
+                    <h1 class="blocktitle"><p style="text-transform: capitalize;">#đơn giản hóa việc nuôi dạy con</p></h1>
                 </div>
                 <div class="blockContainer clearfix">
                     <div id="block_homepage_first" class="blockHomepage clearfix">
                         <img src="/images/Nouveaut_s.jpg">
                         <div class="TitleContainer">
                             <p>Created for you.. with you</p>
-                            <h3>New products</h3>
-                            <a class="ctaBlock" href="https://www.babymoov.com/en_us/new.html">Let's discover</a>
+                            <h3>Sản phẩm mới</h3>
+                            <a class="ctaBlock" href="{{ route('new-pro') }}">Xem chi tiết</a>
                         </div>
                     </div>
                     <div id="block_homepage_second" class="blockHomepage clearfix">
@@ -56,8 +56,8 @@
                         <img class="hover" src="/images/fond-rose.png">
                         <div class="TitleContainer">
                             <p>All to Simply </p>
-                            <h3>Food Preparation</h3>
-                            <a class="ctaBlock" href="https://www.babymoov.com/en_us/our-products/feeding.html">I want to know more</a>
+                            <h3>Thông tin thêm</h3>
+                            <a class="ctaBlock" href="#">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>

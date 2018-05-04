@@ -59,4 +59,11 @@ $(function() {
             }
         });
     });
+
+    $('.product__item').hover(function() {
+        $(this).toggleClass('hover');
+    });
+    $('.nbs-flexisel-item').hover(function() {
+        $(this).toggleClass('hover');
+    });
 });

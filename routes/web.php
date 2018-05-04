@@ -15,6 +15,12 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('detail/{id?}', 'HomeController@detail');
 
+Route::get('products', 'HomeController@getAll')->name('all-pro');
+
+Route::get('new-products', 'HomeController@getNews')->name('new-pro');
+
+Route::get('/search', 'HomeController@search')->name('search');
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

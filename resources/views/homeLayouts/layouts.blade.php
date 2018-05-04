@@ -5,8 +5,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>@yield('title')</title>
-    <meta name="description" content="Discover the Official Babymoov Website with its innovative selection of baby merchandise including diaper bags, food preparation, humidifers, newborn headrest, monitors, anti-uv tents... Lifetime Warranty on all Babymoov products!">
-    <meta name="keywords" content="Babymoov, baby moov, babymove, baby move, baby mov, babymov, pregnancy sleeping aid, pregancy pillow, maternity pillow, maternity sleep support, baby produtcs; nursery furniture; baby store at Babymoov; baby feeding, baby bathing, baby gear; baby health; baby care; diapering: diaper bags; baby feeding essentials, Baby&#39;s meals, baby feeding, breastfeeding, bottle feeding, baby food processor, sterilizers, baby feeding essentials, baby feeding solutions; baby food containers; Babymoov, babymove, Baby moov, Baby products, feeding products, baby meals, baby food maker, food steamer, food processor, blender, sterilizer, bottle warmer, baby food preparation, baby tableware, baby seat, booster seat, baby chair, baby bowls, baby food containers,  baby&#39;sleep, baby sleeping, baby nights, newborn cushions, humidifiers, gears, baby support, baby pillows, baby cushions, headrest, lovenest, cosysleep, baby blankets, baby sleeping bags, plagiocephaly, anti flat head pillow, flat head prevention, anti flat head syndrom, prevent flat head syndrom, Toddler products, Diaper bags, Baby bags, changing bags, changing pad, outing with baby, moms bags, diaper bags fro dads, trendy diaper bags, unisex diaper bag, backpack diaper bags, diaper bags for men, messengers, totes, designer diaper bags, baby diaper bags, utilitarian diaper bags, white diaper bags, black diaper backs, blue diaper bags, pink diaper bags, polka dots diaper bags, baby outing, first baby outing, diaper bags, anti-Uv tents, baby sun protection, travel cots, babycots, stroller pillow, newborn pillow, newborn support, baby safety products, infant safety, toddler safety, baby monitors, audio baby monitors, video baby monitors, low emission wave baby monitors, digital green technology, listening system, multi room baby monitors, long range baby monitors, ">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="robots" content="INDEX,FOLLOW">
     <link rel="icon" href="https://www.babymoov.com/media/favicon/default/Babymoov_Favicon_fond_blanc_1.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://www.babymoov.com/media/favicon/default/Babymoov_Favicon_fond_blanc_1.png" type="image/x-icon">
@@ -32,14 +32,12 @@
     <script type="text/javascript" src="/js/apps.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/search.js"></script>
     @yield('script')
 </head>
 
 <body class=" cms-index-index cms-home-us" data-gr-c-s-loaded="true">
     <div class="wrapper">
-        <noscript>
-            &lt;div class="global-site-notice noscript"&gt; &lt;div class="notice-inner"&gt; &lt;p&gt; &lt;strong&gt;JavaScript seems to be disabled in your browser.&lt;/strong&gt;&lt;br /&gt; You must have JavaScript enabled in your browser to utilize the functionality of this website. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt;
-        </noscript>
         <div class="page">
             <header id="header" class="page-header">
                 <div class="page-header-container">
@@ -51,11 +49,12 @@
                         </a>
                         <!-- Search -->
                         <div id="header-search" class="skip-content">
-                            <form id="search_mini_form" action="#" method="get">
+                            <form id="search_mini_form" action="{{ route('search') }}" method="get">
                                 <div class="input-box">
                                     <!--<label for="search">Search:</label>-->
                                     <img src="/images/picto_search-red.png" alt="" class="search-input-picto">
-                                    <input id="search" type="search" name="q" value="" class="input-text required-entry" maxlength="128" placeholder="Search" autocomplete="off">
+                                    <input id="search" type="search" name="search" value="" class="input-text required-entry" maxlength="128" placeholder="Search" autocomplete="off">
+                                    {{ csrf_field() }}
                                     <button type="submit" title="Search" class="button search-button">
                                         <span>►<!--<span>Search</span>--></span>
                                     </button>
@@ -70,14 +69,14 @@
                 <div class="nav-box">
                     <nav class="nav-container">
                         <ul class="nav">
-                            <li class="nav-link_first-lvl">
+                            <li class="nav-link_first-lvl{{ Request::is('/') ? ' active-menu' : '' }}">
                                 <a href="{{ route('home') }}">Trang chủ</a>
                             </li>
-                            <li class="nav-link_first-lvl">
-                                <a href="#">Sản phẩm</a>
+                            <li class="nav-link_first-lvl{{ Request::is('products') ? ' active-menu' : '' }}">
+                                <a href="{{ route('all-pro') }}">Sản phẩm</a>
                             </li>
-                            <li class="nav-link_first-lvl">
-                                <a href="#">Sản phẩm bán chạy</a>
+                            <li class="nav-link_first-lvl{{ Request::is('new-products') ? ' active-menu' : '' }}">
+                                <a href="{{ route('new-pro') }}">Sản phẩm mới</a>
                             </li>
                         </ul>
                     </nav>
