@@ -36,7 +36,7 @@
                         @endforelse
                     </ul>
                 </div>
-                <div class="paginations">
+                <div class="pagination__container">
                     @if(count($products))
                         {{ $products->links('layouts.pagination') }}
                     @endif

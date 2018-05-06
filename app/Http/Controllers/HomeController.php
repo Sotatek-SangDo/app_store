@@ -28,6 +28,12 @@ class HomeController extends Controller
         return view('homeLayouts.index', ["products" => $products]);
     }
 
+    public function getAllPro()
+    {
+        $products = $this->productServices->getAllPro();
+        return json_encode($products);
+    }
+
     public function getAll()
     {
         $products = $this->productServices->getAll();

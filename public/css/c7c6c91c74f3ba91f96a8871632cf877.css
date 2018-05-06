@@ -2016,12 +2016,6 @@ span.weee {
 /* -------------------------------------------- *
  * Product Image
  */
-.product-image,
-.no-touch .product-img-box .product-image:not(.zoom-available):hover {
-  position: relative;
-  display: block;
-  border: 1px solid #EDEDED;
-}
 
 @media only screen and (max-width: 770px) {
   body .product-img-box .product-image:hover {

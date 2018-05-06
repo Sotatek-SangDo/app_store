@@ -67,3 +67,4 @@ $(function() {
         $(this).toggleClass('hover');
     });
 });
+

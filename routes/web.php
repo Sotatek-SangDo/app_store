@@ -21,6 +21,8 @@ Route::get('new-products', 'HomeController@getNews')->name('new-pro');
 
 Route::get('/search', 'HomeController@search')->name('search');
 
+Route::get('/get-all', 'HomeController@getAllPro');
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

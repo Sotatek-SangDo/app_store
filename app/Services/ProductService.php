@@ -26,7 +26,15 @@ class ProductService
         $products = Product::limit($limit)->get();
         return $products;
     }
-    public function getALl()
+    public function getAllPro()
+    {
+        $products = Product::join('categories', 'categories.id', '=', 'products.cat_id')
+                            ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_sub_desc', 'pro_desc', 'categories.name')
+                            ->get();
+        return $products;
+    }
+
+    public function getAll()
     {
         $products = Product::join('categories', 'categories.id', '=', 'products.cat_id')
                             ->select('products.id', 'pro_name', 'pro_price', 'pro_thumbnail', 'pro_sub_desc', 'pro_desc', 'categories.name')
@@ -89,6 +97,7 @@ class ProductService
                             ->with('imageProducts')
                             ->where('products.id', $id)
                             ->first();
+        Log::info($product);
         return $product;
     }
 

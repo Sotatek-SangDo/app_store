@@ -19,6 +19,17 @@
     <!--<![endif]-->
   
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     <!-- OG META Data -->
     <meta property="og:title" content="Babymoov® USA | Baby equipment and nursery products in United State">
     <meta property="og:site_name" content="Babymoov">
@@ -26,7 +37,7 @@
     <meta property="og:url" content="https://www.babymoov.com/en_us/">
     <meta property="og:image" content="https://www.babymoov.com/media/wysiwyg/CMS/lien-site.PNG">
     <meta property="og:description" content="">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
     <script src="/js/responsiveslides.min.js"></script>
     <script type="text/javascript" src="/js/jquery.flexisel.js"></script>
     <script type="text/javascript" src="/js/apps.js"></script>

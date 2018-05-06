@@ -42,7 +42,7 @@
                                         @forelse($pro['imageProducts'] as $key => $img)
                                             <img id="image-main" class="gallery-image visible {{ !$key ? 'act' : 'inact'}}" src="{{ $img->pro_img }}" alt="Babyni" title="Babyni" data-image="{{$key}}">
                                         @empty
-                                            <img src="{{ $pro->pro_thumnail }}" class="gallery-image visible" alt="Babyni" title="Babyni">
+                                            <img src="{{ $pro->pro_thumbnail }}" class="gallery-image visible" alt="Babyni" title="Babyni">
                                         @endforelse
                                     </div>
                                 </div>
@@ -51,14 +51,13 @@
                                         @forelse($pro['imageProducts'] as $key => $img)
                                             <li>
                                                 <a class="thumb-link {{ !$key ? 'active-img' : ''}}" href="#" title="" data-image="{{$key}}">
-                                                    <img src="{{ $img->pro_img }}" alt="" width="60" height="60">
+                                                    <img src="{{ $img->pro_img }}" alt="{{ $pro->pro_name }}" width="60" height="60">
                                                 </a>
                                             </li>
                                         @empty
-                                            <img id="image-main" class="gallery-image visible" src="">
                                             <li>
                                                 <a class="thumb-link" href="#" title="" data-image-index="0">
-                                                    <img src="" alt="{{ $pro->pro_thumnail }}" width="25" height="25">
+                                                    <img src="{{ $pro->pro_thumbnail }}" alt="{{ $pro->pro_name }}" width="25" height="25">
                                                 </a>
                                             </li>
                                         @endforelse
